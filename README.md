@@ -3,9 +3,31 @@
 ## Table of Contents
 
 * [Creational](#creational)
-** [Singleton](#singleton)
+	* [Singleton](#singleton)
+	* [Factory method](#factory_method)
+	* [Abstract factory](#singleton)
+	* [Builder](#singleton)
+	* [Prototype](#singleton)
 * [Structural](#structural)
+	* [Adapter/Wrapper](#singleton)
+	* [Bridge](#singleton)
+	* [Composite](#singleton)
+	* [Decorator](#singleton)
+	* [Facade](#singleton)
+	* [Flyweight](#singleton)
+	* [Proxy](#singleton)
 * [Behavioral](#behavioral)
+	* [Chain of responsibility](#singleton)
+	* [Command](#singleton)
+	* [Interpreter](#singleton)
+	* [Iterator](#singleton)
+	* [Mediator](#singleton)
+	* [Memento](#singleton)
+	* [Observer](#singleton)
+	* [State](#singleton)
+	* [Strategy](#singleton)
+	* [Template method](#singleton)
+	* [Visitor](#singleton)
 
 ## Creational
 
