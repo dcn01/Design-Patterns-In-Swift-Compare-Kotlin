@@ -1,5 +1,12 @@
 # Design Patters in Swift and Kotlin. Comparison
 
+## Table of Contents
+
+* [Creational](#creational)
+** [Singleton](#singleton)
+* [Structural](#structural)
+* [Behavioral](#behavioral)
+
 ## Creational
 
 ### Singleton
