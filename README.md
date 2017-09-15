@@ -4,7 +4,7 @@
 
 * [Creational](#creational)
 	* [Singleton](#singleton)
-	* [Factory method](#factory_method)
+	* [Factory method](#factory-method)
 	* [Abstract factory](#singleton)
 	* [Builder](#singleton)
 	* [Prototype](#singleton)
