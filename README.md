@@ -1,5 +1,7 @@
 # Design Patters in Swift and Kotlin. Comparison
 
+The main goal of this repository is to show the difference between patterns realization on Swift and Kotlin. It contains all 23 GOF patterns on both languages.
+
 ## Table of Contents
 
 * [Creational](#creational)
@@ -38,7 +40,6 @@ Each pattern's folder contains:
 - usage on Swift
 - example on Kotlin
 - usage on Kotlin
-- summary about main differences on this languages
 Also, there are two files with realization: .swift and .kt
 
 ## Advantages
