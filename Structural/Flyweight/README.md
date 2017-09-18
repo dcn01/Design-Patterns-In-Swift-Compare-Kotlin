@@ -104,5 +104,3 @@ coffeeShop.takeOrder("Buziraguhindwa, Burundi", 3)
 
 coffeeShop.serve()
 ````
-
-### Summary

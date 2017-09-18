@@ -131,5 +131,3 @@ fun main(args: Array<String>) {
 }
 
 ````
-
-### Summary

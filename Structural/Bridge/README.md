@@ -97,5 +97,3 @@ tvRemoteControl.turnOn()
 var fancyVacuumCleanerRemoteControl = RemoteControl(appliance = VacuumCleaner())
 fancyVacuumCleanerRemoteControl.turnOn()
 ````
-
-### Summary
