@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Creational](#creational)
-	* [Singleton](Creational/Singleton/README.md)
+	* [Singleton](#singleton)
 	* [Factory method](#factory-method)
 	* [Abstract factory](#abstract-factory)
 	* [Builder](#builder)
