@@ -1,13 +1,10 @@
-object PrinterDriver {
+object Singleton {
     init {
         println("Initializing with object: $this")
     }
 
-    fun print() = println("Printing with object: $this")
+    fun doSomething() = println("Do something with object: $this")
 }
-
 fun main(args: Array<String>) {
-    println("Start")
-    PrinterDriver.print()
-    PrinterDriver.print()
+	Singleton.doSomething()
 }
