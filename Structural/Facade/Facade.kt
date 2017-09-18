@@ -1,4 +1,4 @@
-import java.util.*
+// Implementation
 
 class ComplexSystemStore(val filePath: String) {
 
@@ -30,6 +30,8 @@ class UserRepository {
 
     fun findFirst(): User = User(systemPreferences.read("USER_KEY"))
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     val userRepository = UserRepository()

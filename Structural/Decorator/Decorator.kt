@@ -1,3 +1,5 @@
+// Implementation
+
 interface CoffeeMachine {
     fun makeSmallCoffee()
     fun makeLargeCoffee()
@@ -25,6 +27,8 @@ class EnhancedCoffeeMachine(val coffeeMachine: CoffeeMachine) : CoffeeMachine by
         println("Enhanced: Adding milk")
     }
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     val normalMachine = NormalCoffeeMachine()

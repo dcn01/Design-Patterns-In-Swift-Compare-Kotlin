@@ -1,8 +1,5 @@
-import java.util.*
+// Implementation
 
-/**
- * Created by brandon on 15-11-27.
- */
 class TreeNode(var name: String) {
     var parent: TreeNode? = null
     var children: Vector<TreeNode>
@@ -33,3 +30,5 @@ public class Tree(var name: String) {
         root = TreeNode(name)
     }
 }
+
+// Usage
