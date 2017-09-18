@@ -94,7 +94,6 @@ atm.canWithdraw(amount: 310) // Cannot because ATM has only 300
 atm.canWithdraw(amount: 100) // Can withdraw - 1x100
 atm.canWithdraw(amount: 165) // Cannot withdraw because ATM doesn't has bill with value of 5
 atm.canWithdraw(amount: 30)  // Can withdraw - 1x20, 2x10
-
 ````
 
 ### Kotlin Example
@@ -123,7 +122,11 @@ class BodyPayload(val body: String, var next: MessageChain? = null) : MessageCha
     override fun addLines(inputHeader: String): String
             = "$inputHeader $body\n".let { next?.addLines(it) ?: it }
 }
+````
 
+### Kotlin Usage
+
+```kotlin
 fun main(args: Array<String>) {
     val authenticationHeader = AuthenticationHeader("123456")
     val contentTypeHeader = ContentTypeHeader("json")
@@ -148,16 +151,6 @@ private fun messageChainUnauthenticated(contentTypeHeader: ContentTypeHeader, me
     contentTypeHeader.next = messageBody
     return contentTypeHeader
 }
-
-
-
-````
-
-### Kotlin Usage
-
-```kotlin
-
-
 ````
 
 ### Summary

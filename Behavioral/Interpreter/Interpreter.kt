@@ -1,6 +1,5 @@
-/**
- * Created by brandon on 15-11-28.
- */
+// Implemented
+
 interface Expression {
     fun interpret(context2: Context2): Int
 }
@@ -16,3 +15,5 @@ class Minus2 : Expression {
 class Context2(var num1: Int, var num2: Int) {
 
 }
+
+// Usage

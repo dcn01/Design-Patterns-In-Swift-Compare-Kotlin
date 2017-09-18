@@ -1,27 +1,24 @@
 // Implementation
 
-class ChungasRevengeDisplay {
+class Person {
     var name: String?
-    let font: String
+    let surname: String
 
-    init(font: String) {
-        self.font = font
+    init(surname: String) {
+        self.surname = surname
     }
 
-    func clone() -> ChungasRevengeDisplay {
-        return ChungasRevengeDisplay(font:self.font)
+    func clone() -> Person {
+        return Person(surname: self.surname)
     }
 }
 
 // Usage
 
-let Prototype = ChungasRevengeDisplay(font:"GotanProject")
+let prototype = Person(surname: "Petrov")
 
-let Philippe = Prototype.clone()
-Philippe.name = "Philippe"
+let ivan = prototype.clone()
+ivan.name = "ivan"
 
-let Christoph = Prototype.clone()
-Christoph.name = "Christoph"
-
-let Eduardo = Prototype.clone()
-Eduardo.name = "Eduardo"
+let petr = prototype.clone()
+petr.name = "petr"

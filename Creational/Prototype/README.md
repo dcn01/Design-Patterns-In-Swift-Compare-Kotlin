@@ -7,59 +7,54 @@
 ### Swift Example
 
 ```swift
-class ChungasRevengeDisplay {
+class Person {
     var name: String?
-    let font: String
+    let surname: String
 
-    init(font: String) {
-        self.font = font
+    init(surname: String) {
+        self.surname = surname
     }
 
-    func clone() -> ChungasRevengeDisplay {
-        return ChungasRevengeDisplay(font:self.font)
+    func clone() -> Person {
+        return Person(surname: self.surname)
     }
 }
-
 ````
 
 ### Swift Usage
 
 ```swift
-let Prototype = ChungasRevengeDisplay(font:"GotanProject")
+let prototype = Person(surname: "Petrov")
 
-let Philippe = Prototype.clone()
-Philippe.name = "Philippe"
+let ivan = prototype.clone()
+ivan.name = "ivan"
 
-let Christoph = Prototype.clone()
-Christoph.name = "Christoph"
-
-let Eduardo = Prototype.clone()
-Eduardo.name = "Eduardo"
-
-
+let petr = prototype.clone()
+petr.name = "petr"
 ````
 
 ### Kotlin Example
 
 ```kotlin
-data class EMail(var recipient: String, var subject: String?, var message: String?) {
-    fun quote(startIndex: Int) : String {
-        return "> ${message?.substring(startIndex)}"
+class Person(var surname: String) {
+    lateinit var name: String
+    
+    fun clone(): Person {
+        return Person(surname)
     }
 }
-
 ````
 
 ### Kotlin Usage
 
 ```kotlin
 fun main(args: Array<String>) {
-    val mail = EMail("abc@example.com", "Hello", "Don't know what to write.")
+    val prototype = Person(surname = "Petrov")
 
-    val copy = mail.copy(recipient = "other@example.com")
+    val ivan = prototype.clone()
+    ivan.name = "Ivan"
 
-    println("Email1 goes to " + mail.recipient + " with subject " + mail.subject)
-    println("Email2 goes to " + copy.recipient + " with subject " + copy.subject)
+    val petr = prototype.clone()
+    petr.name = "petr"
 }
-
 ````
