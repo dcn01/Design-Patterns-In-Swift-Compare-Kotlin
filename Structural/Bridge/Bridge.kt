@@ -1,23 +1,38 @@
 // Implementation
 
-interface Sourceable {
-    open fun method()
+interface Switch {
+    var appliance: Appliance
+    fun turnOn()
 }
 
-public class SourceSub1 : Sourceable {
-    override fun method() {
-        println("this (${this.javaClass}) is the first sub!")
+interface Appliance {
+    fun run()
+}
+
+class RemoteControl(override var appliance: Appliance) : Switch {
+
+    override fun turnOn() {
+        appliance.run()
+    }
+    
+}
+
+class TV: Appliance {
+    override fun run() {
+        println("tv turned on")
     }
 }
 
-public class SourceSub2 : Sourceable {
-    override fun method() {
-        println("this (${this.javaClass}) is the second sub")
+class VacuumCleaner: Appliance {
+    override fun run() {
+        println("vacuum cleaner turned on")
     }
 }
 
-open class Bridge {
-    var source: Sourceable? = null
+// Usage
 
-    public fun method() = source?.method()
-}
+var tvRemoteControl = RemoteControl(appliance = TV())
+tvRemoteControl.turnOn()
+
+var fancyVacuumCleanerRemoteControl = RemoteControl(appliance = VacuumCleaner())
+fancyVacuumCleanerRemoteControl.turnOn()
