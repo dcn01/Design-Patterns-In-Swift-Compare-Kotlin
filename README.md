@@ -29,3 +29,6 @@
 	* [Template method](Behavioral/Template-method/README.md)
 	* [Visitor](Behavioral/Visitor/README.md)
 
+## Description
+
+Each pattern's description contains example and usage on Swift and Kotlin. Also, there is a small summary about main difference between languages' realizations.
