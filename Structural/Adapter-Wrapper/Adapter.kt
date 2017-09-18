@@ -1,3 +1,5 @@
+// Implementation
+
 interface Temperature {
     var temperature: Double
 }
@@ -16,6 +18,8 @@ class FahrenheitTemperature(var celsiusTemperature: CelsiusTemperature) : Temper
 
     private fun convertCelsiusToFahrenheit(c: Double): Double = (c * 9 / 5) + 32
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     val celsiusTemperature = CelsiusTemperature(0.0)
