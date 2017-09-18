@@ -1,3 +1,5 @@
+// Implementation
+
 interface Sourceable {
     open fun method()
 }
