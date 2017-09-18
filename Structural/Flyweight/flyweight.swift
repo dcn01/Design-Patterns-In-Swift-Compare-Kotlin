@@ -13,7 +13,6 @@ final class SpecialityCoffee: CustomStringConvertible {
     }
 }
 
-// Menu acts as a factory and cache for CoffeeFlavour flyweight objects
 final class Menu {
     private var coffeeAvailable: [String: SpecialityCoffee] = [:]
 
@@ -43,9 +42,9 @@ final class CoffeeShop {
 
 // Usage
 
-let coffeeShop = CoffeeShop()
+val coffeeShop = CoffeeShop()
 
-coffeeShop.takeOrder(origin: "Yirgacheffe, Ethiopia", table: 1)
-coffeeShop.takeOrder(origin: "Buziraguhindwa, Burundi", table: 3)
+coffeeShop.takeOrder("Yirgacheffe, Ethiopia", 1)
+coffeeShop.takeOrder("Buziraguhindwa, Burundi", 3)
 
 coffeeShop.serve()

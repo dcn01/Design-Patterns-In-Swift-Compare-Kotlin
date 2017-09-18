@@ -5,14 +5,12 @@ interface CoffeeMachine {
     fun makeLargeCoffee()
 }
 
-class NormalCoffeeMachine : CoffeeMachine {
+class NormalCoffeeMachine: CoffeeMachine {
     override fun makeSmallCoffee() = println("Normal: Making small coffee")
-
     override fun makeLargeCoffee() = println("Normal: Making large coffee")
 }
 
-//Decorator:
-class EnhancedCoffeeMachine(val coffeeMachine: CoffeeMachine) : CoffeeMachine by coffeeMachine {
+class EnhancedCoffeeMachine(val coffeeMachine: CoffeeMachine): CoffeeMachine by coffeeMachine {
 
     // overriding behaviour
     override fun makeLargeCoffee() {

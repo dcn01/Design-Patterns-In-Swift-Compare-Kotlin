@@ -1,48 +1,38 @@
-import java.util.*
+// Implementation
 
-/**
- * Created by brandon on 15-11-27.
- * 享元模式（Flyweight）
- */
-class ConnectionPool private constructor() {
-    var pool: Vector<Connection>
-    var url = "jdbc:mysql://localhost:3306/test"
-    var username = "brandon"
-    var password = "large_elephant"
-    var driveClassName = "com.mysql.jdbc.Driver"
-    var poolSize = 100
-    var conn: Connection? = null
+class SpecialityCoffee(var origin: String)
 
-    companion object {
-        var INSTANCE: ConnectionPool ? = null
-    }
+class Menu {
+    private var coffeeAvailable = hashMapOf<String, SpecialityCoffee>()
 
-    init {
-        pool = Vector(poolSize)
-        for (i in 0..poolSize) {
-            Class.forName(driveClassName)
-            conn = Drivermanager.getConnection(url, username, password)
-            pool.add(conn)
+    fun lookup(origin: String): SpecialityCoffee {
+        if (coffeeAvailable[origin] == null) {
+            coffeeAvailable[origin] = SpecialityCoffee(origin = origin)
         }
+        return coffeeAvailable[origin]
     }
-
-    @Synchronized fun getConnection(): Connection? {
-        if (pool.size > 0) {
-            var conn = pool.get(0)
-            pool.remove(conn)
-            return conn
-        } else return null
-    }
-
-    object Drivermanager {
-        fun getConnection(url: String, usrname: String, paasword: String): Connection {
-            return Connection()
-        }
-    }
-
 }
 
-class Connection {
+class CoffeeShop {
+    private var orders = hashMapOf<Int, SpecialityCoffee>()
+    private var menu = Menu()
 
+    fun takeOrder(origin: String, table: Int) {
+        orders[table] = menu.lookup(origin = origin)
+    }
 
+    fun serve() {
+        orders.forEach { table, specialityCoffee ->
+            println("Serving " +origin + " to table " + table)
+        }
+    }
 }
+
+// Usage
+
+val coffeeShop = CoffeeShop()
+
+coffeeShop.takeOrder("Yirgacheffe, Ethiopia", 1)
+coffeeShop.takeOrder("Buziraguhindwa, Burundi", 3)
+
+coffeeShop.serve()
