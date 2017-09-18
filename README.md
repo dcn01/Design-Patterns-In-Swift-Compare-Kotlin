@@ -37,6 +37,20 @@
 >
 >**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
 
+#### Swift 
+
+##### Example
+
+##### Usage
+
+#### Kotlin
+
+##### Example
+
+##### Usage
+
+#### Summary
+
 ### Factory method
 
 > Define an interface for creating a single object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
