@@ -4,8 +4,8 @@
 
 * [Creational](#creational)
 	* [Singleton](Creational/Singleton/README.md)
-	* [Factory method](Creational/Factory-method/README.md)
-	* [Abstract factory](Creational/Abstract-factory/README.md)
+	* [Factory method](Creational/FactoryMethod/README.md)
+	* [Abstract factory](Creational/AbstractFactory/README.md)
 	* [Builder](Creational/Builder/README.md)
 	* [Prototype](Creational/Prototype/README.md)
 * [Structural](#structural)
