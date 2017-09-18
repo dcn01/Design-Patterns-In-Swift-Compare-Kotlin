@@ -17,7 +17,7 @@
 	* [Flyweight](Structural/Flyweight/README.md)
 	* [Proxy](Structural/Proxy/README.md)
 * [Behavioral](#behavioral)
-	* [Chain of responsibility](Behavioral/Chain-of-responsibility/README.md)
+	* [Chain of responsibility](Behavioral/ChainOfResponsibility/README.md)
 	* [Command](Behavioral/Command/README.md)
 	* [Interpreter](Behavioral/Interpreter/README.md)
 	* [Iterator](Behavioral/Iterator/README.md)
@@ -26,7 +26,7 @@
 	* [Observer](Behavioral/Observer/README.md)
 	* [State](Behavioral/State/README.md)
 	* [Strategy](Behavioral/StrategyREADME.md)
-	* [Template method](Behavioral/Template-method/README.md)
+	* [Template method](Behavioral/TemplateMethod/README.md)
 	* [Visitor](Behavioral/Visitor/README.md)
 
 ## Description
