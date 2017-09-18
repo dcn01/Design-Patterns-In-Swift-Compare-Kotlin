@@ -3,9 +3,7 @@
 protocol Shape {
     func draw(fillColor: String)
 }
-/*: 
-Leafs
-*/ 
+
 final class Square : Shape {
     func draw(fillColor: String) {
         print("Drawing a Square with color \(fillColor)")
@@ -18,9 +16,6 @@ final class Circle : Shape {
     }
 }
 
-/*:
-Composite
-*/
 final class Whiteboard : Shape {
     lazy var shapes = [Shape]()
     

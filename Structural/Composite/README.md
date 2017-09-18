@@ -10,9 +10,7 @@
 protocol Shape {
     func draw(fillColor: String)
 }
-/*: 
-Leafs
-*/ 
+
 final class Square : Shape {
     func draw(fillColor: String) {
         print("Drawing a Square with color \(fillColor)")
@@ -25,9 +23,6 @@ final class Circle : Shape {
     }
 }
 
-/*:
-Composite
-*/
 final class Whiteboard : Shape {
     lazy var shapes = [Shape]()
     
@@ -41,8 +36,6 @@ final class Whiteboard : Shape {
         }
     }
 }
-
-
 ````
 
 ### Swift Usage
@@ -50,51 +43,40 @@ final class Whiteboard : Shape {
 ```swift
 var whiteboard = Whiteboard(Circle(), Square())
 whiteboard.draw("Red")
-
-
 ````
 
 ### Kotlin Example
 
 ```kotlin
-class TreeNode(var name: String) {
-    var parent: TreeNode? = null
-    var children: Vector<TreeNode>
-
-    init {
-        children = Vector()
-    }
-
-    public fun getChildren(): Enumeration<TreeNode> = children.elements()
-
-
-    public fun addChildren(node: TreeNode) = children.add(node)
-
-
-    public fun rmChildren(node: TreeNode) = children.remove(node)
-
-    public fun printTree() {
-        println(name)
-        this.children.forEach { it.printTree() }
-    }
-
+interface Shape {
+    fun draw(fillColor: String)
 }
 
-public class Tree(var name: String) {
-    var root: TreeNode
-
-    init {
-        root = TreeNode(name)
+class Square: Shape {
+    override fun draw(fillColor: String) {
+        println("Drawing a Square with color" + fillColor)
     }
 }
 
+class Circle: Shape {
+    override fun draw(fillColor: String) {
+        println("Drawing a Circle with color" + fillColor)
+    }
+}
+
+class WhiteBoard(var shapes: ArrayList<Shape>): Shape {
+    override fun draw(fillColor: String) {
+        for (shape in shapes) {
+            shape.draw(fillColor)
+        }
+    }
+}
 ````
 
 ### Kotlin Usage
 
 ```kotlin
-
-
+val shapes = arrayListOf<Shape>(Circle(), Square())
+var whiteboard = WhiteBoard(shapes)
+whiteboard.draw("Red")
 ````
-
-### Summary

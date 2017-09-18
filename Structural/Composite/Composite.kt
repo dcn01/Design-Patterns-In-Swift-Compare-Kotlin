@@ -1,34 +1,31 @@
 // Implementation
 
-class TreeNode(var name: String) {
-    var parent: TreeNode? = null
-    var children: Vector<TreeNode>
-
-    init {
-        children = Vector()
-    }
-
-    public fun getChildren(): Enumeration<TreeNode> = children.elements()
-
-
-    public fun addChildren(node: TreeNode) = children.add(node)
-
-
-    public fun rmChildren(node: TreeNode) = children.remove(node)
-
-    public fun printTree() {
-        println(name)
-        this.children.forEach { it.printTree() }
-    }
-
+interface Shape {
+    fun draw(fillColor: String)
 }
 
-public class Tree(var name: String) {
-    var root: TreeNode
+class Square: Shape {
+    override fun draw(fillColor: String) {
+        println("Drawing a Square with color" + fillColor)
+    }
+}
 
-    init {
-        root = TreeNode(name)
+class Circle: Shape {
+    override fun draw(fillColor: String) {
+        println("Drawing a Circle with color" + fillColor)
+    }
+}
+
+class WhiteBoard(var shapes: ArrayList<Shape>): Shape {
+    override fun draw(fillColor: String) {
+        for (shape in shapes) {
+            shape.draw(fillColor)
+        }
     }
 }
 
 // Usage
+
+val shapes = arrayListOf<Shape>(Circle(), Square())
+var whiteboard = WhiteBoard(shapes)
+whiteboard.draw("Red")
