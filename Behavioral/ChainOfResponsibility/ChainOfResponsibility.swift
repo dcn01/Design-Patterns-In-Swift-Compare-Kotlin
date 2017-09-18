@@ -1,11 +1,5 @@
-/*:
-🐝 Chain Of Responsibility
---------------------------
+// Implementation
 
-The chain of responsibility pattern is used to process varied requests, each of which may be dealt with by a different handler.
-
-### Example:
-*/
 final class MoneyPile {
 
     let value: Int
@@ -75,10 +69,9 @@ final class ATM {
         return "Can withdraw: \(self.startPile.canWithdraw(amount: amount))"
     }
 }
-/*:
-### Usage
-*/
-// Create piles of money and link them together 10 < 20 < 50 < 100.**
+
+// Usage
+
 let ten = MoneyPile(value: 10, quantity: 6, nextPile: nil)
 let twenty = MoneyPile(value: 20, quantity: 2, nextPile: ten)
 let fifty = MoneyPile(value: 50, quantity: 2, nextPile: twenty)
@@ -90,6 +83,3 @@ atm.canWithdraw(amount: 310) // Cannot because ATM has only 300
 atm.canWithdraw(amount: 100) // Can withdraw - 1x100
 atm.canWithdraw(amount: 165) // Cannot withdraw because ATM doesn't has bill with value of 5
 atm.canWithdraw(amount: 30)  // Can withdraw - 1x20, 2x10
-/*:
->**Further Examples:** [Design Patterns in Swift](https://github.com/kingreza/Swift-Chain-Of-Responsibility)
-*/

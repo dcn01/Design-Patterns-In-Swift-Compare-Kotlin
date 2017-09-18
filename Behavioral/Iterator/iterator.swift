@@ -1,11 +1,5 @@
-/*:
-🍫 Iterator
------------
+// Implementation
 
-The iterator pattern is used to provide a standard interface for traversing a collection of items in an aggregate object without the need to understand its underlying structure.
-
-### Example:
-*/
 struct Novella {
     let name: String
 }
@@ -34,9 +28,9 @@ extension Novellas: Sequence {
         return NovellasIterator(novellas: novellas)
     }
 }
-/*:
-### Usage
-*/
+
+// Usage
+
 let greatNovellas = Novellas(novellas: [Novella(name: "The Mist")] )
 
 for novella in greatNovellas {

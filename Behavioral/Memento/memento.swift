@@ -1,15 +1,7 @@
-/*:
-💾 Memento
-----------
+// Implementation
 
-The memento pattern is used to capture the current state of an object and store it in such a manner that it can be restored at a later time without breaking the rules of encapsulation.
-
-### Example
-*/
 typealias Memento = NSDictionary
-/*:
-Originator
-*/
+
 protocol MementoConvertible {
     var memento: Memento { get }
     init?(memento: Memento)
@@ -60,9 +52,9 @@ enum CheckPoint {
         return defaults.object(forKey: saveName) as? Memento
     }
 }
-/*:
- ### Usage
-*/
+
+// Usage
+
 var gameState = GameState(chapter: "Black Mesa Inbound", weapon: "Crowbar")
 
 gameState.chapter = "Anomalous Materials"

@@ -1,12 +1,5 @@
-/*:
-👓 Observer
------------
+// Implementation
 
-The observer pattern is used to allow an object to publish changes to its state.
-Other objects subscribe to be immediately notified of any changes.
-
-### Example
-*/
 protocol PropertyObserver : class {
     func willChange(propertyName: String, newPropertyValue: Any?)
     func didChange(propertyName: String, oldPropertyValue: Any?)
@@ -41,13 +34,10 @@ final class Observer : PropertyObserver {
         }
     }
 }
-/*:
-### Usage
-*/
+
+// Usage
+
 var observerInstance = Observer()
 var testChambers = TestChambers()
 testChambers.observer = observerInstance
 testChambers.testChamberNumber += 1
-/*:
->**Further Examples:** [Design Patterns in Swift](https://github.com/kingreza/Swift-Observer)
-*/

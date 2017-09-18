@@ -1,11 +1,4 @@
-/*:
-🎶 Interpreter
---------------
-
-The interpreter pattern is used to evaluate sentences in a language.
-
-### Example
-*/
+// Implementation
 
 protocol IntegerExpression {
     func evaluate(_ context: IntegerContext) -> Int
@@ -71,9 +64,9 @@ final class AddExpression: IntegerExpression {
         return AddExpression(op1: self.operand1, op2: self.operand2)
     }
 }
-/*:
-### Usage
-*/
+
+// Usage
+
 var context = IntegerContext()
 
 var a = IntegerVariableExpression(name: "A")
@@ -87,6 +80,3 @@ context.assign(expression: b, value: 1)
 context.assign(expression: c, value: 3)
 
 var result = expression.evaluate(context)
-/*:
->**Further Examples:** [Design Patterns in Swift](https://github.com/kingreza/Swift-Interpreter)
-*/

@@ -1,9 +1,5 @@
-/*:
-## 🍃 Flyweight
-The flyweight pattern is used to minimize memory usage or computational expenses by sharing as much as possible with other similar objects.
-### Example
-*/
-// Instances of CoffeeFlavour will be the Flyweights
+// Implementation
+
 final class SpecialityCoffee: CustomStringConvertible {
     var origin: String
     var description: String {
@@ -44,9 +40,9 @@ final class CoffeeShop {
         }
     }
 }
-/*:
-### Usage
-*/
+
+// Usage
+
 let coffeeShop = CoffeeShop()
 
 coffeeShop.takeOrder(origin: "Yirgacheffe, Ethiopia", table: 1)

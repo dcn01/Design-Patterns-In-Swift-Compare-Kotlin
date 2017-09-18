@@ -1,11 +1,5 @@
-/*:
-🏭 Factory Method
------------------
+// Implementation
 
-The factory pattern is used to replace class constructors, abstracting the process of object generation so that the type of the object instantiated can be determined at run-time.
-
-### Example
-*/
 protocol Currency {
     func symbol() -> String
     func code() -> String
@@ -49,9 +43,9 @@ enum CurrencyFactory {
         
     }
 }
-/*:
-### Usage
-*/
+
+// Usage
+
 let noCurrencyCode = "No Currency Code Available"
 
 CurrencyFactory.currency(for: .greece)?.code() ?? noCurrencyCode

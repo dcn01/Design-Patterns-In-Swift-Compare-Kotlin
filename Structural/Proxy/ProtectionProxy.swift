@@ -1,12 +1,5 @@
-/*:
-☔ Protection Proxy
-------------------
+// Implementation
 
-The proxy pattern is used to provide a surrogate or placeholder object, which references an underlying object. 
-Protection proxy is restricting access.
-
-### Example
-*/
 protocol DoorOperator {
     func open(doors: String) -> String
 }
@@ -40,9 +33,9 @@ class CurrentComputer : DoorOperator {
         return computer.open(doors: doors)
     }
 }
-/*:
-### Usage
-*/
+
+// Usage
+ 
 let computer = CurrentComputer()
 let podBay = "Pod Bay Doors"
 

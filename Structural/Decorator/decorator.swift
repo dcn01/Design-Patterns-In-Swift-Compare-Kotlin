@@ -1,12 +1,5 @@
-/*:
-🍧 Decorator
-------------
+// Implementation
 
-The decorator pattern is used to extend or alter the functionality of objects at run- time by wrapping them in an object of a decorator class. 
-This provides a flexible alternative to using inheritance to modify behaviour.
-
-### Example
-*/
 protocol Coffee {
     func getCost() -> Double
     func getIngredients() -> String
@@ -66,9 +59,9 @@ final class WhipCoffee: CoffeeDecorator {
         return super.getIngredients() + ingredientSeparator + "Whip"
     }
 }
-/*:
-### Usage:
-*/
+
+// Usage:
+
 var someCoffee: Coffee = SimpleCoffee()
 print("Cost : \(someCoffee.getCost()); Ingredients: \(someCoffee.getIngredients())")
 someCoffee = Milk(decoratedCoffee: someCoffee)

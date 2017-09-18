@@ -1,11 +1,5 @@
-/*:
-💡 Strategy
------------
+// Implementation
 
-The strategy pattern is used to create an interchangeable family of algorithms from which the required process is chosen at run-time.
-
-### Example
-*/
 protocol PrintStrategy {
     func print(_ string: String) -> String
 }
@@ -34,14 +28,11 @@ final class LowerCaseStrategy: PrintStrategy {
         return string.lowercased()
     }
 }
-/*:
-### Usage
-*/
+
+// Usage
+
 var lower = Printer(strategy: LowerCaseStrategy())
 lower.print("O tempora, o mores!")
 
 var upper = Printer(strategy: UpperCaseStrategy())
 upper.print("O tempora, o mores!")
-/*:
->**Further Examples:** [Design Patterns in Swift](https://github.com/kingreza/Swift-Strategy)
-*/

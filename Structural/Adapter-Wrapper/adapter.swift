@@ -1,11 +1,5 @@
-/*:
-🔌 Adapter
-----------
+// Implementation
 
-The adapter pattern is used to provide a link between two otherwise incompatible types by wrapping the "adaptee" with a class that supports the interface required by the client.
-
-### Example
-*/
 protocol OlderDeathStarSuperLaserAiming {
     var angleV: NSNumber {get}
     var angleH: NSNumber {get}
@@ -40,14 +34,11 @@ struct OldDeathStarSuperlaserTarget : OlderDeathStarSuperLaserAiming {
         self.target = target
     }
 }
-/*:
-### Usage
-*/
+
+// Usage
+
 let target = DeathStarSuperlaserTarget(angleHorizontal: 14.0, angleVertical: 12.0)
 let oldFormat = OldDeathStarSuperlaserTarget(target)
 
 oldFormat.angleH
 oldFormat.angleV
-/*:
->**Further Examples:** [Design Patterns in Swift](https://github.com/kingreza/Swift-Adapter)
-*/

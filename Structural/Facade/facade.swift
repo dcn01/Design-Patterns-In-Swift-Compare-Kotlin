@@ -1,11 +1,5 @@
-/*:
-🎁 Façade
----------
+// Implementation
 
-The facade pattern is used to define a simplified interface to a more complex subsystem.
-
-### Example
-*/
 enum Eternal {
 
     static func set(_ object: Any, forKey defaultName: String) {
@@ -20,8 +14,7 @@ enum Eternal {
     }
 
 }
-/*:
-### Usage
-*/
+
+// Usage
 Eternal.set("Disconnect me. I’d rather be nothing", forKey:"Bishop")
 Eternal.object(forKey: "Bishop")

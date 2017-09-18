@@ -1,5 +1,5 @@
-### Example:
-*/
+// Implementation
+
 final class Singleton {
     static let sharedInstance = Singleton()
 
@@ -8,7 +8,6 @@ final class Singleton {
     }
 }
 
-/*:
-### Usage:
-*/
+// Usage:
+
 let singleton = Singleton.sharedInstance

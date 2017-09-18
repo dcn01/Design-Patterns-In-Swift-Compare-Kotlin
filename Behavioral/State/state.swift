@@ -1,12 +1,5 @@
-/*:
-🐉 State
----------
+// Implementation
 
-The state pattern is used to alter the behaviour of an object as its internal state changes.
-The pattern allows the class for an object to apparently change at run-time.
-
-### Example
-*/
 final class Context {
 	private var state: State = UnauthorizedState()
 
@@ -48,15 +41,13 @@ class AuthorizedState: State {
 
 	func userId(context: Context) -> String? { return userId }
 }
-/*:
-### Usage
-*/
+
+// Usage
+
 let userContext = Context()
 (userContext.isAuthorized, userContext.userId)
 userContext.changeStateToAuthorized(userId: "admin")
 (userContext.isAuthorized, userContext.userId) // now logged in as "admin"
 userContext.changeStateToUnauthorized()
 (userContext.isAuthorized, userContext.userId)
-/*:
->**Further Examples:** [Design Patterns in Swift](https://github.com/kingreza/Swift-State)
-*/
+

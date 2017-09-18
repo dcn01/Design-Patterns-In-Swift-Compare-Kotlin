@@ -1,12 +1,5 @@
-/*:
-👷 Builder
-----------
+// Implementation
 
-The builder pattern is used to create complex objects with constituent parts that must be created in the same order or using a specific algorithm. 
-An external class controls the construction algorithm.
-
-### Example
-*/
 class DeathStarBuilder {
 
     var x: Double?
@@ -20,7 +13,7 @@ class DeathStarBuilder {
     }
 }
 
-struct DeathStar : CustomStringConvertible {
+struct DeathStar: CustomStringConvertible {
 
     let x: Double
     let y: Double
@@ -41,9 +34,9 @@ struct DeathStar : CustomStringConvertible {
         return "Death Star at (x:\(x) y:\(y) z:\(z))"
     }
 }
-/*:
-### Usage
-*/
+
+// Usage
+
 let empire = DeathStarBuilder { builder in
     builder.x = 0.1
     builder.y = 0.2
@@ -51,6 +44,3 @@ let empire = DeathStarBuilder { builder in
 }
 
 let deathStar = DeathStar(builder:empire)
-/*:
->**Further Examples:** [Design Patterns in Swift](https://github.com/kingreza/Swift-Builder)
-*/
