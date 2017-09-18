@@ -1,59 +1,33 @@
 // Implementation
 
-interface Observer {
-    open fun update()
-}
+open class Computer {
+    fun printBrandName() {
+        println("Computer brand: " + brandName())
+    }
 
-class Observer1() : Observer {
-    override fun update() {
-        println("observer1 has reserved!")
+    open fun brandName(): String {
+        return "Default brand name"
     }
 }
 
-class Observer2() : Observer {
-    override fun update() {
-        println("observer2 has reserved!")
+class Apple: Computer() {
+    
+    override fun brandName(): String {
+        return "Apple"
+    }
+    
+}
+
+class Dell: Computer {
+    override fun brandName(): String {
+        return "Dell"
     }
 }
 
+// Usage
 
-interface Subject {
-    open fun add(observer: Observer)
+val apple = Apple()
+apple.printBrandName()
 
-    open fun del(observer: Observer)
-
-    open fun notifyObservers()
-
-    open fun operation()
-}
-
-
-abstract class AbstractSubject : Subject {
-
-    private var vector: Vector<Observer>
-
-    init {
-        vector = Vector()
-    }
-
-    override fun add(observer: Observer) {
-        vector.add(observer)
-    }
-
-    override fun del(observer: Observer) {
-        vector.remove(observer)
-    }
-
-    override fun notifyObservers() {
-        vector.forEach { it -> it.update() }
-    }
-
-}
-
-
-public class MyDefSubject() : AbstractSubject() {
-    override fun operation() {
-        println("update ...")
-        notifyObservers()
-    }
-}
+val dell = Dell()
+dell.printBrandName()
