@@ -1,10 +1,12 @@
-package lmller.github.io.gofkotlin.prototype
+// Implementation
 
 data class EMail(var recipient: String, var subject: String?, var message: String?) {
     fun quote(startIndex: Int) : String {
         return "> ${message?.substring(startIndex)}"
     }
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     val mail = EMail("abc@example.com", "Hello", "Don't know what to write.")

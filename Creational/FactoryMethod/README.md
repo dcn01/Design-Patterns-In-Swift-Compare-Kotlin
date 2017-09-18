@@ -108,7 +108,3 @@ fun main(args: Array<String>) {
 }
 
 ````
-
-### Summary
-
-The realization of this pattern is quite simular. You declare interface interface/protocol and use it to create new classes which implement this interface/protocol.

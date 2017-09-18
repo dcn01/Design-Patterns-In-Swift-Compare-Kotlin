@@ -1,33 +1,36 @@
-//Based on: http://stackoverflow.com/a/13030163/361832
+// Implementation
 
-interface Plant
+Interface Button
 
-class OrangePlant : Plant
+class OSXButton: Button
 
-class ApplePlant : Plant
+class WinButton: Button
 
-abstract class PlantFactory {
-    abstract fun makePlant(): Plant
+abstract class ButtonFactory {
+    abstract fun makeButton(): Button
+
 
     companion object {
-        inline fun <reified T : Plant> createFactory(): PlantFactory = when (T::class) {
-            OrangePlant::class -> OrangeFactory()
-            ApplePlant::class  -> AppleFactory()
+        inline fun <reified T: Button> createFactory(): ButtonFactory = when (T::class) {
+            OSXButton::class -> OSXFactory()
+            WinButton::class  -> WinFactory()
             else               -> throw IllegalArgumentException()
         }
     }
 }
 
-class AppleFactory : PlantFactory() {
-    override fun makePlant(): Plant = ApplePlant()
+class OSXFactory: ButtonFactory {
+    override fun makeButton(): Button = OSXButton()
 }
 
-class OrangeFactory : PlantFactory() {
-    override fun makePlant(): Plant = OrangePlant()
+class WinFactory: ButtonFactory {
+    override fun makeButton(): Button = WinButton()
 }
+
+// Usage
 
 fun main(args: Array<String>) {
-    val plantFactory = PlantFactory.createFactory<OrangePlant>()
-    val plant = plantFactory.makePlant()
-    println("Created plant: $plant")
+    val buttonFactory = ButtonFactory.createFactory<OSXButton>()
+    val button = buttonFactory.makeButton()
+    println("Created button: $button")
 }

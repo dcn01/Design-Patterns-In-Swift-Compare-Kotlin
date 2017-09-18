@@ -1,7 +1,4 @@
-import java.io.File
-
-// Let's assume that Dialog class is provided by external library.
-// We have only access to Dialog public interface which cannot be changed.
+// Implementation
 
 class Dialog() {
 
@@ -76,6 +73,8 @@ class DialogBuilder() {
 fun dialog(init: DialogBuilder.() -> Unit): Dialog {
     return DialogBuilder(init).build()
 }
+
+// Usage
 
 fun main(args: Array<String>) {
 

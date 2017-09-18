@@ -1,3 +1,5 @@
+// Implementation
+
 interface Currency {
     val code: String
 }
@@ -18,6 +20,8 @@ class CurrencyFactory {
         }
     }
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     val noCurrencyCode = "No Currency Code Available"

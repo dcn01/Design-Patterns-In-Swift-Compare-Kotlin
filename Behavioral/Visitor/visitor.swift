@@ -27,8 +27,6 @@ class PlanetTatooine: Planet {
 	func accept(visitor: PlanetVisitor) { visitor.visit(planet: self) }
 }
 
-
-
 class NameVisitor: PlanetVisitor {
 	var name = ""
 

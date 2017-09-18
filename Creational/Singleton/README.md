@@ -43,7 +43,3 @@ object Singleton {
 Singleton.doSomething()
 
 ````
-
-### Summary
-
-The realization on both languages is quite simple and simular. Actually, singleton has common realization on different languages.

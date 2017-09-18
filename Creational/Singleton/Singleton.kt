@@ -5,6 +5,7 @@ object Singleton {
 
     fun doSomething() = println("Do something with object: $this")
 }
+
 fun main(args: Array<String>) {
 	Singleton.doSomething()
 }
