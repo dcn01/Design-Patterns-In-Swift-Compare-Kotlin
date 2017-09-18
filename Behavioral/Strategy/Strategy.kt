@@ -1,3 +1,5 @@
+// Implementation
+
 class Printer(val stringFormatterStrategy: (String) -> String) {
     fun printString(string: String) = println(stringFormatterStrategy.invoke(string))
 }
@@ -5,6 +7,8 @@ class Printer(val stringFormatterStrategy: (String) -> String) {
 val lowerCaseFormatter: (String) -> String = { it.toLowerCase() }
 
 val upperCaseFormatter = { it: String -> it.toUpperCase() }
+
+// Usage
 
 fun main(args: Array<String>) {
 

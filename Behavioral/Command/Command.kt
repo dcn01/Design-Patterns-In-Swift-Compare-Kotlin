@@ -1,4 +1,4 @@
-import java.util.*
+// Implementation
 
 interface OrderCommand {
     fun execute()
@@ -24,6 +24,8 @@ class CommandProcessor {
         queue.clear()
     }
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     CommandProcessor()

@@ -1,3 +1,5 @@
+// Implementation
+
 interface ReportVisitable {
     fun accept(visitor: ReportVisitor)
 }
@@ -47,6 +49,8 @@ class YearlyReportVisitor(var yearlyCost: Long = 0) : ReportVisitor {
         yearlyCost += contract.costPerMonth * 12
     }
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     val projectAlpha = FixedPriceContract(costPerYear = 10000)

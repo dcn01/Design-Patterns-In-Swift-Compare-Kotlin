@@ -1,4 +1,4 @@
-import java.util.*
+// Implementation
 
 interface Observer {
     open fun update()

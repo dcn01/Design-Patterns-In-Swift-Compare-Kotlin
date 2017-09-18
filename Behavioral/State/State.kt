@@ -1,5 +1,4 @@
-import AuthorizationState.Authorized
-import AuthorizationState.Unauthorized
+// Implementation
 
 sealed class AuthorizationState {
 
@@ -40,6 +39,8 @@ class AuthorizationPresenter {
         return "User '$userLogin' is logged in: $isAuthorized"
     }
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     val authorization = AuthorizationPresenter()

@@ -1,8 +1,5 @@
-import com.sun.xml.internal.fastinfoset.util.StringArray
+// Implementation
 
-/**
- * Created by brandon on 15-11-27.
- */
 interface Collection {
     open fun iterator(): Iterator
     open operator fun get(index: Int): Any

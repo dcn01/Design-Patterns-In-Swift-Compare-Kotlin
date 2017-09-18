@@ -1,4 +1,4 @@
-import kotlin.properties.Delegates
+// Implementation
 
 interface TextChangedListener {
     fun onTextChanged(newText: String)
@@ -16,6 +16,8 @@ class TextView {
         listener?.onTextChanged(new)
     }
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     val textView = TextView()

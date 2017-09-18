@@ -1,5 +1,4 @@
- * Created by brandon on 15-11-28.
- */
+// Implementation
 
 interface Mediator {
     fun createMediator()

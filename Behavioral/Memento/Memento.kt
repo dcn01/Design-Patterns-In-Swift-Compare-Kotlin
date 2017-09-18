@@ -1,6 +1,4 @@
-/**
- * Created by brandon on 15-11-28.
- */
+// Implementation
 
 class Original(var value: String) {
     fun createMemento() = Memento(value)
@@ -10,6 +8,7 @@ class Original(var value: String) {
 }
 
 class Memento(var value: String) {
+
 }
 
 class Storage(var memento: Memento) {
