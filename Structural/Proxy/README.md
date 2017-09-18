@@ -1,8 +1,8 @@
-### Singleton
+### Proxy
 
-> Ensure a class has only one instance, and provide a global point of access to it.
+> Provide a surrogate or placeholder for another object to control access to it.
 >
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
+>**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Proxy_pattern)
 
 ### Swift Example
 

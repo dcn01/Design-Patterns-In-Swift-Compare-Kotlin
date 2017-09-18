@@ -1,8 +1,8 @@
-### Singleton
+### Interpreter
 
-> Ensure a class has only one instance, and provide a global point of access to it.
+> Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
 >
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
+>**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Interpreter_pattern)
 
 ### Swift Example
 

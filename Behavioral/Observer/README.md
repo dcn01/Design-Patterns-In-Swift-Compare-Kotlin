@@ -1,8 +1,8 @@
-### Singleton
+### Observer
 
-> Ensure a class has only one instance, and provide a global point of access to it.
+> Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.
 >
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
+>**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Observer_pattern)
 
 ### Swift Example
 

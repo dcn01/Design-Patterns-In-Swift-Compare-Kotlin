@@ -1,8 +1,8 @@
-### Singleton
+### Iterator
 
-> Ensure a class has only one instance, and provide a global point of access to it.
+> Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 >
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
+>**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Iterator_pattern)
 
 ### Swift Example
 

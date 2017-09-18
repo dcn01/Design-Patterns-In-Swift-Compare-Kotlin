@@ -1,8 +1,8 @@
-### Singleton
+### Flyweight
 
-> Ensure a class has only one instance, and provide a global point of access to it.
+> Use sharing to support large numbers of similar objects efficiently.
 >
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
+>**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Flyweight_pattern)
 
 ### Swift Example
 

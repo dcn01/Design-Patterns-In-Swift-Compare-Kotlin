@@ -1,8 +1,8 @@
-### Singleton
+### Memento
 
-> Ensure a class has only one instance, and provide a global point of access to it.
+> Without violating encapsulation, capture and externalize an object's internal state allowing the object to be restored to this state later.
 >
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
+>**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Memento_pattern)
 
 ### Swift Example
 

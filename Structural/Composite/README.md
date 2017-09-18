@@ -1,8 +1,8 @@
-### Singleton
+### Composite
 
-> Ensure a class has only one instance, and provide a global point of access to it.
+> Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 >
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
+>**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Composite_pattern)
 
 ### Swift Example
 

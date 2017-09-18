@@ -1,8 +1,8 @@
-### Singleton
+### Bridge
 
-> Ensure a class has only one instance, and provide a global point of access to it.
+> Decouple an abstraction from its implementation allowing the two to vary independently.
 >
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
+>**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Bridge_pattern)
 
 ### Swift Example
 

@@ -1,8 +1,8 @@
-### Singleton
+### Visitor
 
-> Ensure a class has only one instance, and provide a global point of access to it.
+> Represent an operation to be performed on the elements of an object structure. Visitor lets a new operation be defined without changing the classes of the elements on which it operates.
 >
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
+>**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Visitor_pattern)
 
 ### Swift Example
 
