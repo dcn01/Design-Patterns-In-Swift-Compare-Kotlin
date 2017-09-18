@@ -1,6 +1,6 @@
 // Implementation
 
-Interface Button
+interface Button
 
 class OSXButton: Button
 
@@ -19,11 +19,11 @@ abstract class ButtonFactory {
     }
 }
 
-class OSXFactory: ButtonFactory {
+class OSXFactory: ButtonFactory() {
     override fun makeButton(): Button = OSXButton()
 }
 
-class WinFactory: ButtonFactory {
+class WinFactory: ButtonFactory() {
     override fun makeButton(): Button = WinButton()
 }
 

@@ -7,69 +7,55 @@
 ### Swift Example
 
 ```swift
-protocol Decimal {
-    func stringValue() -> String
-    // factory
-    static func make(string : String) -> Decimal
+protocol Button {}
+
+class OSXButton: Button {}
+
+class WinButton: Button {}
+
+protocol ButtonFactory {
+    func makeButton() -> Button
 }
 
-typealias NumberFactory = (String) -> Decimal
-
-struct NextStepNumber: Decimal {
-    private var nextStepNumber: NSNumber
-
-    func stringValue() -> String { return nextStepNumber.stringValue }
-    
-    static func make(string: String) -> Decimal {
-        return NextStepNumber(nextStepNumber: NSNumber(value: (string as NSString).longLongValue))
+class OSXFactory: ButtonFactory {
+    func makeButton() -> Button {
+        return OSXButton()
     }
 }
 
-struct SwiftNumber: Decimal {
-    private var swiftInt: Int
-
-    func stringValue() -> String { return "\(swiftInt)" }
-    
-    static func make(string: String) -> Decimal {
-        return SwiftNumber(swiftInt:(string as NSString).integerValue)
+class WinFactory: ButtonFactory {
+    func makeButton() -> Button {
+        return WinButton()
     }
 }
 
-enum NumberType {
-    case nextStep, swift
+enum Type {
+    case OSX, Win
 }
 
-enum NumberHelper {
-    static func factory(for type: NumberType) -> NumberFactory {
+enum FactoryHelper {
+    static func factory(for type: Type) -> ButtonFactory {
         switch type {
-        case .nextStep:
-            return NextStepNumber.make
-        case .swift:
-            return SwiftNumber.make
+        case .OSX:
+            return OSXFactory()
+        case .Win:
+            return WinFactory()
         }
     }
 }
-
 ````
 
 ### Swift Usage
 
 ```swift
-let factoryOne = NumberHelper.factory(for: .nextStep)
-let numberOne = factoryOne("1")
-numberOne.stringValue()
-
-let factoryTwo = NumberHelper.factory(for: .swift)
-let numberTwo = factoryTwo("2")
-numberTwo.stringValue()
-
-
+let buttonFactory = FactoryHelper.factory(for: .OSX)
+let button = buttonFactory.makeButton()
 ````
 
 ### Kotlin Example
 
 ```kotlin
-Interface Button
+interface Button
 
 class OSXButton: Button
 
@@ -88,14 +74,13 @@ abstract class ButtonFactory {
     }
 }
 
-class OSXFactory: ButtonFactory {
+class OSXFactory: ButtonFactory() {
     override fun makeButton(): Button = OSXButton()
 }
 
-class WinFactory: ButtonFactory {
+class WinFactory: ButtonFactory() {
     override fun makeButton(): Button = WinButton()
 }
-
 ````
 
 ### Kotlin Usage
