@@ -40,6 +40,7 @@ Each pattern's folder contains:
 - usage on Swift
 - example on Kotlin
 - usage on Kotlin
+
 Also, there are two files with realization: .swift and .kt
 
 ## Advantages

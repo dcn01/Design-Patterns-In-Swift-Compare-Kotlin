@@ -1,44 +1,30 @@
 // Implementation
 
-protocol OlderDeathStarSuperLaserAiming {
-    var angleV: NSNumber {get}
-    var angleH: NSNumber {get}
+protocol Temperature {
+    var temperature: Double { get }
 }
-/*:
-**Adaptee**
-*/
-struct DeathStarSuperlaserTarget {
-    let angleHorizontal: Double
-    let angleVertical: Double
 
-    init(angleHorizontal:Double, angleVertical:Double) {
-        self.angleHorizontal = angleHorizontal
-        self.angleVertical = angleVertical
+struct CelsiusTemperature: Temperature {
+    let temperature: Double
+    
+    init(temperature: Double) {
+        self.temperature = temperature
     }
 }
-/*:
-**Adapter**
-*/
-struct OldDeathStarSuperlaserTarget : OlderDeathStarSuperLaserAiming {
-    private let target : DeathStarSuperlaserTarget
 
-    var angleV:NSNumber {
-        return NSNumber(value: target.angleVertical)
+struct FahrenheitTemperature: Temperature {
+    private let celsiusTemperature: CelsiusTemperature
+    
+    init(celsiusTemperature: CelsiusTemperature) {
+        self.celsiusTemperature = celsiusTemperature
     }
-
-    var angleH:NSNumber {
-        return NSNumber(value: target.angleHorizontal)
-    }
-
-    init(_ target:DeathStarSuperlaserTarget) {
-        self.target = target
+    
+    var temperature: Double {
+        return (celsiusTemperature * 9 / 5) + 32
     }
 }
 
 // Usage
 
-let target = DeathStarSuperlaserTarget(angleHorizontal: 14.0, angleVertical: 12.0)
-let oldFormat = OldDeathStarSuperlaserTarget(target)
-
-oldFormat.angleH
-oldFormat.angleV
+let celsius = CelsiusTemperature(temperature: 0.0)
+let fahrenheit = FahrenheitTemperature(celsiusTemperature: celsius)

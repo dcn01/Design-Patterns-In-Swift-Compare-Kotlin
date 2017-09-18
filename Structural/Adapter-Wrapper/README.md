@@ -7,52 +7,36 @@
 ### Swift Example
 
 ```swift
-protocol OlderDeathStarSuperLaserAiming {
-    var angleV: NSNumber {get}
-    var angleH: NSNumber {get}
+protocol Temperature {
+    var temperature: Double { get }
 }
-/*:
-**Adaptee**
-*/
-struct DeathStarSuperlaserTarget {
-    let angleHorizontal: Double
-    let angleVertical: Double
 
-    init(angleHorizontal:Double, angleVertical:Double) {
-        self.angleHorizontal = angleHorizontal
-        self.angleVertical = angleVertical
-    }
-}
-/*:
-**Adapter**
-*/
-struct OldDeathStarSuperlaserTarget : OlderDeathStarSuperLaserAiming {
-    private let target : DeathStarSuperlaserTarget
-
-    var angleV:NSNumber {
-        return NSNumber(value: target.angleVertical)
-    }
-
-    var angleH:NSNumber {
-        return NSNumber(value: target.angleHorizontal)
-    }
-
-    init(_ target:DeathStarSuperlaserTarget) {
-        self.target = target
+struct CelsiusTemperature: Temperature {
+    let temperature: Double
+    
+    init(temperature: Double) {
+        self.temperature = temperature
     }
 }
 
+struct FahrenheitTemperature: Temperature {
+    private let celsiusTemperature: CelsiusTemperature
+    
+    init(celsiusTemperature: CelsiusTemperature) {
+        self.celsiusTemperature = celsiusTemperature
+    }
+    
+    var temperature: Double {
+        return (celsiusTemperature * 9 / 5) + 32
+    }
+}
 ````
 
 ### Swift Usage
 
 ```swift
-let target = DeathStarSuperlaserTarget(angleHorizontal: 14.0, angleVertical: 12.0)
-let oldFormat = OldDeathStarSuperlaserTarget(target)
-
-oldFormat.angleH
-oldFormat.angleV
-
+let celsius = CelsiusTemperature(temperature: 0.0)
+let fahrenheit = FahrenheitTemperature(celsiusTemperature: celsius)
 ````
 
 ### Kotlin Example
@@ -76,13 +60,11 @@ class FahrenheitTemperature(var celsiusTemperature: CelsiusTemperature) : Temper
 
     private fun convertCelsiusToFahrenheit(c: Double): Double = (c * 9 / 5) + 32
 }
-
 ````
 
 ### Kotlin Usage
 
 ```kotlin
-
 fun main(args: Array<String>) {
     val celsiusTemperature = CelsiusTemperature(0.0)
     val fahrenheitTemperature = FahrenheitTemperature(celsiusTemperature)
@@ -93,6 +75,4 @@ fun main(args: Array<String>) {
     fahrenheitTemperature.temperature = 100.0
     println("${fahrenheitTemperature.temperature} F -> ${celsiusTemperature.temperature} C")
 }
-
-
 ````
