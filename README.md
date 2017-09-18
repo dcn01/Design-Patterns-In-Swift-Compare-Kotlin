@@ -37,19 +37,19 @@
 >
 >**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
 
-#### Swift 
+## Swift 
 
-##### Example
+### Example
 
-##### Usage
+### Usage
 
-#### Kotlin
+## Kotlin
 
-##### Example
+### Example
 
-##### Usage
+### Usage
 
-#### Summary
+## Summary
 
 ### Factory method
 
