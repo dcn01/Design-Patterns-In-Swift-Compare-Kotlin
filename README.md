@@ -31,4 +31,18 @@
 
 ## Description
 
-Each pattern's description contains example and usage on Swift and Kotlin. Also, there is a small summary about main difference between languages' realizations.
+Actually, this repository contains the most complete list of GOF patterns with its realization on Kotlin and Swift languages. You can recognize that this languages is quite simular.
+
+Each pattern's folder contains:
+- example on Swift
+- usage on Swift
+- example on Kotlin
+- usage on Kotlin
+- summary about main differences on this languages
+Also, there are two files with realization: .swift and .kt
+
+## Advantages
+
+- The most complete list of GOF patterns. It contains all 23 patterns.
+- The realization on two languages: Kotlin and Swift.
+- Actual version of Swift 4 and Kotlin 1.2
