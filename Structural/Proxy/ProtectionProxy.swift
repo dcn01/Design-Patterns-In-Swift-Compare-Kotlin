@@ -1,45 +1,38 @@
 // Implementation
 
-protocol DoorOperator {
-    func open(doors: String) -> String
+protocol File {
+    func read(fileName: String) -> String
 }
 
-class HAL9000 : DoorOperator {
-    func open(doors: String) -> String {
-        return ("HAL9000: Affirmative, Dave. I read you. Opened \(doors).")
+class NormalFile: File {
+    func read(fileName: String) -> String {
+        return ("NormalFile. Read \(fileName).")
     }
 }
 
-class CurrentComputer : DoorOperator {
-    private var computer: HAL9000!
+class SecuredFile: File {
+    private var file: NormalFile!
 
     func authenticate(password: String) -> Bool {
-
         guard password == "pass" else {
-            return false;
+            return false
         }
-
-        computer = HAL9000()
-
+        file = NormalFile()
         return true
     }
 
-    func open(doors: String) -> String {
-
-        guard computer != nil else {
+    func read(fileName: String) -> String {
+        guard file != nil else {
             return "Access Denied. I'm afraid I can't do that."
         }
-
-        return computer.open(doors: doors)
+        return computer.read(fileName: fileName)
     }
 }
 
 // Usage
  
-let computer = CurrentComputer()
-let podBay = "Pod Bay Doors"
+let securedFile = SecuredFile()
+securedFile.read(fileName: "someTextFile")
 
-computer.open(doors: podBay)
-
-computer.authenticate(password: "pass")
-computer.open(doors: podBay)
+securedFile.authenticate(password: "pass")
+securedFile.read(fileName: "someTextFile")

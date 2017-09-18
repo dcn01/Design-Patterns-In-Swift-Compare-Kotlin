@@ -1,13 +1,14 @@
+// Implementation
+
 interface File {
     fun read(name: String)
 }
 
-class NormalFile : File {
+class NormalFile: File {
     override fun read(name: String) = println("Reading file: $name")
 }
 
-//Proxy:
-class SecuredFile : File {
+class SecuredFile: File {
     val normalFile = NormalFile()
     var password: String = ""
 
@@ -20,6 +21,8 @@ class SecuredFile : File {
         }
     }
 }
+
+// Usage
 
 fun main(args: Array<String>) {
     val securedFile = SecuredFile()
