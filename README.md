@@ -4,52 +4,32 @@
 
 * [Creational](#creational)
 	* [Singleton](Creational/Singleton/README.md)
-	* [Factory method](#factory-method)
-	* [Abstract factory](#abstract-factory)
-	* [Builder](#builder)
-	* [Prototype](#prototype)
+	* [Factory method](Creational/Factory-method/README.md)
+	* [Abstract factory](Creational/Abstract-factory/README.md)
+	* [Builder](Creational/Builder/README.md)
+	* [Prototype](Creational/Prototype/README.md)
 * [Structural](#structural)
-	* [Adapter/Wrapper](#adapter-wrapper)
-	* [Bridge](#bridge)
-	* [Composite](#composite)
-	* [Decorator](#decorator)
-	* [Facade](#facade)
-	* [Flyweight](#flyweight)
-	* [Proxy](#proxy)
+	* [Adapter/Wrapper](Structural/Adapter-Wrapper/README.md)
+	* [Bridge](Structural/Bridge/README.md)
+	* [Composite](Structural/Composite/README.md)
+	* [Decorator](Structural/Decorator/README.md)
+	* [Facade](Structural/Facade/README.md)
+	* [Flyweight](Structural/Flyweight/README.md)
+	* [Proxy](Structural/Proxy/README.md)
 * [Behavioral](#behavioral)
-	* [Chain of responsibility](#chain-of-responsibility)
-	* [Command](#command)
-	* [Interpreter](#interpreter)
-	* [Iterator](#iterator)
-	* [Mediator](#mediator)
-	* [Memento](#memento)
-	* [Observer](#observer)
-	* [State](#state)
-	* [Strategy](#strategy)
-	* [Template method](#template-method)
-	* [Visitor](#visitor)
+	* [Chain of responsibility](Behavioral/Chain-of-responsibility/README.md)
+	* [Command](Behavioral/Command/README.md)
+	* [Interpreter](Behavioral/Interpreter/README.md)
+	* [Iterator](Behavioral/Iterator/README.md)
+	* [Mediator](Behavioral/Mediator/README.md)
+	* [Memento](Behavioral/Memento/README.md)
+	* [Observer](Behavioral/Observer/README.md)
+	* [State](Behavioral/State/README.md)
+	* [Strategy](Behavioral/StrategyREADME.md)
+	* [Template method](Behavioral/Template-method/README.md)
+	* [Visitor](Behavioral/Visitor/README.md)
 
 ## Creational
-
-### Singleton
-
-> Ensure a class has only one instance, and provide a global point of access to it.
->
->**Source:** [wikipedia.org](https://en.wikipedia.org/wiki/Singleton_pattern)
-
-## Swift 
-
-### Example
-
-### Usage
-
-## Kotlin
-
-### Example
-
-### Usage
-
-## Summary
 
 ### Factory method
 
