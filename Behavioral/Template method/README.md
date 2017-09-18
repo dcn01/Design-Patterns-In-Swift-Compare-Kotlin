@@ -1,4 +1,4 @@
-### Template method
+## Template method
 
 > Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 >
@@ -6,10 +6,30 @@
 
 ### Swift Example
 
+```swift
+
+
+````
+
 ### Swift Usage
 
-### Swift Example
+```swift
 
-### Swift Usage
+
+````
+
+### Kotlin Example
+
+```kotlin
+
+
+````
+
+### Kotlin Usage
+
+```kotlin
+
+
+````
 
 ### Summary

@@ -1,4 +1,4 @@
-### Bridge
+## Bridge
 
 > Decouple an abstraction from its implementation allowing the two to vary independently.
 >
@@ -6,10 +6,30 @@
 
 ### Swift Example
 
+```swift
+
+
+````
+
 ### Swift Usage
 
-### Swift Example
+```swift
 
-### Swift Usage
+
+````
+
+### Kotlin Example
+
+```kotlin
+
+
+````
+
+### Kotlin Usage
+
+```kotlin
+
+
+````
 
 ### Summary

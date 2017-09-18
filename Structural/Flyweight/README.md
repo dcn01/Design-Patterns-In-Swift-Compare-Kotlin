@@ -1,4 +1,4 @@
-### Flyweight
+## Flyweight
 
 > Use sharing to support large numbers of similar objects efficiently.
 >
@@ -6,10 +6,30 @@
 
 ### Swift Example
 
+```swift
+
+
+````
+
 ### Swift Usage
 
-### Swift Example
+```swift
 
-### Swift Usage
+
+````
+
+### Kotlin Example
+
+```kotlin
+
+
+````
+
+### Kotlin Usage
+
+```kotlin
+
+
+````
 
 ### Summary

@@ -1,4 +1,4 @@
-### Observer
+## Observer
 
 > Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.
 >
@@ -6,10 +6,30 @@
 
 ### Swift Example
 
+```swift
+
+
+````
+
 ### Swift Usage
 
-### Swift Example
+```swift
 
-### Swift Usage
+
+````
+
+### Kotlin Example
+
+```kotlin
+
+
+````
+
+### Kotlin Usage
+
+```kotlin
+
+
+````
 
 ### Summary

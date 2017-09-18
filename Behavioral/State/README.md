@@ -1,4 +1,4 @@
-### State
+## State
 
 > Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
 >
@@ -6,10 +6,30 @@
 
 ### Swift Example
 
+```swift
+
+
+````
+
 ### Swift Usage
 
-### Swift Example
+```swift
 
-### Swift Usage
+
+````
+
+### Kotlin Example
+
+```kotlin
+
+
+````
+
+### Kotlin Usage
+
+```kotlin
+
+
+````
 
 ### Summary

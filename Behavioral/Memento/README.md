@@ -1,4 +1,4 @@
-### Memento
+## Memento
 
 > Without violating encapsulation, capture and externalize an object's internal state allowing the object to be restored to this state later.
 >
@@ -6,10 +6,30 @@
 
 ### Swift Example
 
+```swift
+
+
+````
+
 ### Swift Usage
 
-### Swift Example
+```swift
 
-### Swift Usage
+
+````
+
+### Kotlin Example
+
+```kotlin
+
+
+````
+
+### Kotlin Usage
+
+```kotlin
+
+
+````
 
 ### Summary
