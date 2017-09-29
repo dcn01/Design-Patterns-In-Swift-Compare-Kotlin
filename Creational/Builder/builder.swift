@@ -1,26 +1,24 @@
 // Implementation
 
-class DeathStarBuilder {
+class PointBuilder {
 
     var x: Double?
     var y: Double?
     var z: Double?
 
-    typealias BuilderClosure = (DeathStarBuilder) -> ()
+    typealias BuilderClosure = (PointBuilder) -> ()
 
     init(buildClosure: BuilderClosure) {
         buildClosure(self)
     }
 }
 
-struct DeathStar: CustomStringConvertible {
-
+struct Point: CustomStringConvertible {
     let x: Double
     let y: Double
     let z: Double
 
-    init?(builder: DeathStarBuilder) {
-
+    init?(builder: PointBuilder) {
         if let x = builder.x, let y = builder.y, let z = builder.z {
             self.x = x
             self.y = y
@@ -31,16 +29,16 @@ struct DeathStar: CustomStringConvertible {
     }
 
     var description:String {
-        return "Death Star at (x:\(x) y:\(y) z:\(z))"
+        return "Point at (x:\(x) y:\(y) z:\(z))"
     }
 }
 
 // Usage
 
-let empire = DeathStarBuilder { builder in
-    builder.x = 0.1
-    builder.y = 0.2
-    builder.z = 0.3
+let zeroPoint = PointBuilder { builder in
+    builder.x = 0
+    builder.y = 0
+    builder.z = 0
 }
 
-let deathStar = DeathStar(builder:empire)
+let point = Point(builder: zeroPoint)
