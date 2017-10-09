@@ -27,7 +27,7 @@ The main goal of this repository is to show the difference between patterns real
 	* [Memento](Behavioral/Memento/README.md)
 	* [Observer](Behavioral/Observer/README.md)
 	* [State](Behavioral/State/README.md)
-	* [Strategy](Behavioral/StrategyREADME.md)
+	* [Strategy](Behavioral/Strategy/README.md)
 	* [Template method](Behavioral/TemplateMethod/README.md)
 	* [Visitor](Behavioral/Visitor/README.md)
 
